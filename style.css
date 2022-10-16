@@ -6,8 +6,8 @@
     --golder: #9b6708;
     --red: #dd1a34;
     --dark: #6d0a17;
-    --blue: #06aed5;
-    --deep: #086788;
+    --blue: #f8e9f2;
+    --deep: #b9bab8;
 }
 
 * {
@@ -23,7 +23,6 @@ body {
     flex-direction: column;
     height: 100vh;
 }
-
 
 .btn {
     border: none;
@@ -359,33 +358,39 @@ body {
 
 /* Home Rooms */
 
-#home-rooms {
+#home-rooms,
+#home-venues {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100%;
     padding: 0 45px;
+    padding-bottom: 40px;
 }
 
-#home-rooms .title {
+#home-rooms .title,
+#home-venues .title {
     text-align: center;
     margin-bottom: 20px;
 }
 
-#home-rooms .title h2 {
+#home-rooms .title h2,
+#home-venues .title h2 {
     font-size: 1.8rem;
     margin-bottom: 10px;
     font-weight: 500;
     color: var(--dark);
 }
 
-#home-rooms .title p {
+#home-rooms .title p,
+#home-venues .title p {
     font-size: 0.85rem;
     font-style: italic;
     padding: 0 10px;
 }
 
-#home-rooms .popular-box {
+#home-rooms .popular-box,
+#home-venues .popular-box {
     border: 1px solid var(--dark);
     border-radius: 3px;
     height: 300px;
@@ -393,13 +398,16 @@ body {
     position: relative;
     z-index: 10;
     opacity: 100;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4), -2px 0 5px rgba(0, 0, 0, 0.4);
 }
 
-#home-rooms .popular-box:hover {
-    border: 1px solid black;
+#home-rooms .popular-box:hover,
+#home-venues .popular-box:hover {
+    border: 1px solid var(--dark);
 }
 
-#home-rooms .popular-box .popular-img {
+#home-rooms .popular-box .popular-img,
+#home-venues .popular-box .popular-img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -410,9 +418,10 @@ body {
     transition: opacity .3s ease-out;
 }
 
-#home-rooms .popular-box .popular-info {
+#home-rooms .popular-box .popular-info,
+#home-venues .popular-box .popular-info {
     background-color: var(--deep);
-    background: linear-gradient(var(--deep) 75%, var(--blue) 100%);
+    background: linear-gradient(var(--deep) 20%, var(--blue) 100%);
     height: 100%;
     padding: 20 25px;
     display: flex;
@@ -422,21 +431,25 @@ body {
     text-align: center;
 }
 
-#home-rooms .popular-box .popular-info h4 {
-    color: var(--white);
+#home-rooms .popular-box .popular-info h4,
+#home-venues .popular-box .popular-info h4 {
+    color: var(--dark);
     font-size: 1.5rem;
     margin-bottom: 20px;
     margin-top: -5px;
+    font-weight: 500;
 }
 
-#home-rooms .popular-box .popular-info p {
-    color: var(--white);
+#home-rooms .popular-box .popular-info p,
+#home-venues .popular-box .popular-info p {
+    color: var(--dark);
     line-height: 1.5rem;
     padding: 0 15px;
     margin-bottom: 20px;
 }
 
-#home-rooms .popular-box .popular-info button {
+#home-rooms .popular-box .popular-info button,
+#home-venues .popular-box .popular-info button {
     padding: 5px 10px;
     background: none;
     background-color: white;
@@ -445,38 +458,73 @@ body {
     transition: opacity .3s ease-out;
 }
 
-#home-rooms .popular-box:hover .popular-info button {
+#home-rooms .popular-box:hover .popular-info button,
+#home-venues .popular-box:hover .popular-info button {
     z-index: 20;
     opacity: 100;
 }
 
-#home-rooms .popular-box:hover .popular-img {
+#home-rooms .popular-box:hover .popular-img,
+#home-venues .popular-box:hover .popular-img {
     opacity: 0;
 }
 
 /* Home Additional Banner */
 
 .home-additional-banner {
-    background-color: var(--red);
-    background-image: linear-gradient(to right, var(--deep) 35%, var(--blue) 100%);
+    background-color: var(--deep);
+    background: linear-gradient(var(--deep) 40%, var(--blue) 100%);
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    color: var(--white);
-}
-
-.home-additional-banner h3 {
-    font-size: 1.1rem;
+    border-top: 1px solid var(--dark);
+    border-bottom: 1px solid var(--dark);
+    color: var(--dark);
 }
 
 .home-additional-banner button:not(.book-now) {
-    padding: 5px 10px;
+    margin: 0 30px;
 }
+
+/* Home Venues */
+
+#home-venues {
+    margin: 60px 0 30px;
+}
+
+/* Gallery */
+
+.home-gallery-container {
+    margin: 30px 0 300px;
+    width: 100%;
+    padding: 0 45px;
+    height: 300px;
+}
+
+.home-gallery-container h2 {
+    font-size: 1.5rem;
+    color: var(--dark);
+    font-weight: 500;   
+}
+
+.home-gallery-container .home-gallery {
+    position: relative;
+}
+
+.home-gallery-container .home-gallery .img-box {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 5;
+    transition: opacity .3s ease-out;
+}
+
 
 @media (min-width: 800px) {
     #navbar .nav-sticky {
