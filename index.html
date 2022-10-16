@@ -11,20 +11,21 @@
 </head>
 <body>
     <div id="navbar">
-        <div>
+        <div class="nav-sticky">
+            <div class="logo"><img src="./Images/logosmall.png" alt="small logo text"></div>
             <ul class="nav-sticky-mobile">
-                <li><a href="#">Vouchers</a></li>
-                <li><a href="#">Book Now</a></li>
+                <li class="sticky-btn"><a href="#">Vouchers</a></li>
+                <li class="sticky-btn"><a href="#">Book Now</a></li>
                 <li><i class="fa fa-bars"></i></li>
             </ul>
-            <ul class="nav-sticky">
-                <li>Vouchers</li>
-                <li>Get the App</li>
+            <ul class="nav-sticky-wide">
+                <li><a href="#">Vouchers</a></li>
+                <li><a href="#">Get the App</a></li>
                 <li><i class="fa fa-search"></i></li>
+                <li><input type="search" name="search" class="nav-search" placeholder="Search..."></li>
             </ul>
         </div>
-        <nav id="navbar" class="nav-hidden">
-            <div class="logo">Cape Lodge</div>
+        <nav id="nav">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Venues</a></li>
@@ -32,7 +33,7 @@
                 <li><a href="#">Gallery</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Book Now</a></li>
-                <li class="nav-search"><li><i class="fa fa-search"></i></li></li>
+                <li class="nav-search"><i class="fa fa-search"></i></li>
             </ul>
         </nav>
     </div>
@@ -40,27 +41,32 @@
     <div id="banner">
         <div class="banner-logo"></div>
         <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
+            <ul>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
         </div>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, quod!</p>
-        <div>
+        <div class="banner-buttons">
             <button class="btn">Book Now</button>
             <button class="btn">Our Venues</button>
         </div>
     </div>
 
     <div id="home-info">
-        <div class="home-info-container">
-            <p class="p-box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nobis fuga esse nihil, error sequi corporis iusto ipsa deserunt reprehenderit laborum necessitatibus accusantium accusamus dolorum ab dolores vitae voluptates voluptatum?</p>
-            <div class="img-box"></div>
+        <div class="home-info-title">
+            <h1>About Our Lodge</h1>
         </div>
         <div class="home-info-container">
             <p class="p-box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nobis fuga esse nihil, error sequi corporis iusto ipsa deserunt reprehenderit laborum necessitatibus accusantium accusamus dolorum ab dolores vitae voluptates voluptatum?</p>
-            <div class="img-box"></div>
+            <div class="img-box" style="background-image: url('https://images.unsplash.com/photo-1470043201067-764120126eb4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')"></div>
+        </div>
+        <div class="home-info-container">
+            <p class="p-box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nobis fuga esse nihil, error sequi corporis iusto ipsa deserunt reprehenderit laborum necessitatibus accusantium accusamus dolorum ab dolores vitae voluptates voluptatum?</p>
+            <div class="img-box" style="background-image: url('https://images.unsplash.com/photo-1599313354145-2329b2dd172e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')"></div>
         </div>
         <button class="btn">Book Now</button>
     </div>
@@ -72,34 +78,34 @@
         </div>
         <div class="popular-boxes">
             <div class="popular-box">
-                <div class="popular-img"></div>
+                <div class="popular-img" style="background-image: url('https://images.unsplash.com/photo-1634552668865-e97a920f5650?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80')"></div>
                 <div class="popular-info">
                     <h4>Amazing Room</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, impedit.</p>
-                    <button>More Information</button>
+                    <button class="btn">More Information</button>
                 </div>
             </div>
             <div class="popular-box">
-                <div class="popular-img"></div>
+                <div class="popular-img" style="background-image: url('https://images.unsplash.com/photo-1545158535-c3f7168c28b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')"></div>
                 <div class="popular-info">
                     <h4>Amazing Room</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, impedit.</p>
-                    <button>More Information</button>
+                    <button class="btn">More Information</button>
                 </div>
             </div>
             <div class="popular-box">
-                <div class="popular-img"></div>
+                <div class="popular-img" style="background-image: url('https://images.unsplash.com/photo-1598258547955-844264b665bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')"></div>
                 <div class="popular-info">
                     <h4>Amazing Room</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, impedit.</p>
-                    <button>More Information</button>
+                    <button class="btn">More Information</button>
                 </div>
             </div>
         </div>
     </div>
     
     <div class="home-additional-banner">
-        <h3>Learn More <button class="btn">About Us</button> or <button class="btn">Contact</button> Us Instead!</h3>
+        <h3>Learn More <button class="btn">About Us</button> or <button class="btn">Contact Us</button> Instead!</h3>
     </div>
 
     <div id="home-venues">
@@ -136,7 +142,7 @@
     </div>
 
     <div class="home-additional-banner">
-        <button class="btn">Book Now</button>
+        <button class="btn book-now">Book Now</button>
     </div>
 
     <div class="home-gallery-container">
