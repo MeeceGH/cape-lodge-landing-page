@@ -22,6 +22,11 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
 }
 
 .btn {
@@ -485,8 +490,12 @@ body {
     color: var(--dark);
 }
 
-.home-additional-banner button:not(.book-now) {
+.home-additional-banner a:not(.book-now) {
     margin: 0 30px;
+}
+
+.home-additional-banner a {
+    padding: 15px 0;
 }
 
 /* Home Venues */
@@ -498,7 +507,7 @@ body {
 /* Gallery */
 
 .home-gallery-container {
-    margin: 30px 0 300px;
+    margin: 55px 0 330px;
     width: 100%;
     padding: 0 45px;
     height: 300px;
@@ -507,7 +516,9 @@ body {
 .home-gallery-container h2 {
     font-size: 1.5rem;
     color: var(--dark);
-    font-weight: 500;   
+    font-weight: 500;
+    margin-bottom: 20px; 
+    text-align: center;
 }
 
 .home-gallery-container .home-gallery {
@@ -522,9 +533,42 @@ body {
     background-size: cover;
     background-position: center;
     z-index: 5;
+    opacity: 0;
     transition: opacity .3s ease-out;
+    border: 1px solid var(--dark);
+    border-radius: 3px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4), -2px 0 5px rgba(0, 0, 0, 0.4);
 }
 
+.home-gallery-container .home-gallery .img-box.show-img {
+    opacity: 100;
+}
+
+/* Footer */
+
+#footer {
+    background-color: #111;
+    color: var(--white);
+    padding: 80px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    border-top: 3px solid var(--dark);
+    margin-top: 50px;
+}
+
+#footer a {
+    color: var(--red);
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 40;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
 
 @media (min-width: 800px) {
     #navbar .nav-sticky {
